@@ -19,6 +19,7 @@
 
         <activity android:name=".builderPattern.BuilderActivity"/>
         <activity android:name=".prototypePattern.PrototypeActivity"/>
+        <activity android:name=".simpleFactoryPattern.FactoryActivity"/>
     </application>
 
 </manifest>

@@ -21,6 +21,12 @@
         android:id="@+id/btu_prototype"
         android:text="原型模式"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btu_simple_factory"
+        android:text="简单工厂模式"/>
+
 
 
 </LinearLayout>

@@ -10,6 +10,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import rannver.designpattern.builderPattern.BuilderActivity;
 import rannver.designpattern.prototypePattern.PrototypeActivity;
+import rannver.designpattern.simpleFactoryPattern.FactoryActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     Button btuBulider;
     @BindView(R.id.btu_prototype)
     Button btuPrototype;
+    @BindView(R.id.btu_simple_factory)
+    Button btuSimpleFactory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,5 +43,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btuSimpleFactory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, FactoryActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }
