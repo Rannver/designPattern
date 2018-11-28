@@ -3,6 +3,7 @@
     package="rannver.designpattern">
 
     <application
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -20,6 +21,7 @@
         <activity android:name=".builderPattern.BuilderActivity"/>
         <activity android:name=".prototypePattern.PrototypeActivity"/>
         <activity android:name=".simpleFactoryPattern.FactoryActivity"/>
+
     </application>
 
 </manifest>
