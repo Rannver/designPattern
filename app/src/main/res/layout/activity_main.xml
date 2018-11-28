@@ -27,6 +27,18 @@
         android:id="@+id/btu_simple_factory"
         android:text="简单工厂模式"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btu_proxy"
+        android:text="静态代理模式"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btu_dynamic_proxy"
+        android:text="代理模式（动态代理）"/>
+
 
 
 </LinearLayout>

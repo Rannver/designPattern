@@ -9,25 +9,28 @@ import android.widget.Button;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import rannver.designpattern.builderPattern.BuilderActivity;
+import rannver.designpattern.dynamicProxyPattern.Buyer2;
+import rannver.designpattern.dynamicProxyPattern.DynamicProxy;
+import rannver.designpattern.dynamicProxyPattern.DynamicProxyActivity;
 import rannver.designpattern.prototypePattern.PrototypeActivity;
+import rannver.designpattern.proxyPattern.ProxyActivity;
 import rannver.designpattern.simpleFactoryPattern.FactoryActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.btu_bulider)
     Button btuBulider;
-    @BindView(R.id.btu_prototype)
     Button btuPrototype;
-    @BindView(R.id.btu_simple_factory)
     Button btuSimpleFactory;
+    Button btuProxy;
+    Button btuDynamicProxy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
 
         //建造者模式
+        btuBulider = findViewById(R.id.btu_bulider);
         btuBulider.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btuPrototype = findViewById(R.id.btu_prototype);
         btuPrototype.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,10 +48,29 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btuSimpleFactory = findViewById(R.id.btu_simple_factory);
         btuSimpleFactory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, FactoryActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btuProxy = findViewById(R.id.btu_proxy);
+        btuProxy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,ProxyActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btuDynamicProxy = findViewById(R.id.btu_dynamic_proxy);
+        btuDynamicProxy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,DynamicProxyActivity.class);
                 startActivity(intent);
             }
         });

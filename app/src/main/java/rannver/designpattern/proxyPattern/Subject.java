@@ -6,6 +6,6 @@ package rannver.designpattern.proxyPattern;
  */
 public interface Subject {
 
-    public void buyMac();
+    public String buyMac();
 
 }
